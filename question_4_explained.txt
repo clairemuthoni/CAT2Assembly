@@ -1,0 +1,23 @@
+The program determines actions based on the sensor value by using comparisons and conditional jumps in assembly. 
+These decsions direcctly update specific memory locations (motor_status and alarm_status) to simulate the states of the motor and alarm. 
+
+The core logic is based on thresholds for the sensor value: 
+
+1. High water level (Sensor Value > 200) :
+The program detects a dangerously high water level.
+The alarm is triggered by setting alarm_status to 1 in memory.
+The motor is stopped by setting motor_status to 0. 
+
+2. Moderate water level (100 < Sensor Value <= 200):
+The program detects a moderate water level. 
+The motor is turned off by setting motor_status to 0.
+The alarm remains off by ensuring alarm_status is 0. 
+
+3. Low water level (Sensor Value <= 100):
+The program detects a safe water level.
+The motor is turned on by setting motor_status to 1.
+The alarm remains off by ensuring alarm_status is 0 
+
+Memory Location Manipulation 
+Memory locations (motor_status and alarm_status) are used to simulate the motor and alarm states.
+Each location stores a single byte (0 or 1) to represent OFF or ON. 

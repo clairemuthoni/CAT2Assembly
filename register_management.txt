@@ -1,0 +1,3 @@
+The main program pushes the argument(n) onto the stack beofre calling the subroutine. 
+The subroutine preserves ebx, ecx, and edx on the stack since these registers are modified. 
+The stack frame is managed using ebp to access arguments and local varibales. 
